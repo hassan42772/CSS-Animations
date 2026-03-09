@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background:url(./450w-QVusphwEQnk.webp);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+    .loader{
+        width: 10rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        background-color: yellow;
+        
+        animation: rotation 2.5s linear infinite ;
+        position: relative;
+    }
+    .loader::before{
+        position: absolute;
+        content: "";
+        width: 9rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        top: -10px;
+        left: 10px;
+        background-color: black;
+
+    }
+    .loader::after{
+        position: absolute;
+        content: "";
+        width: 2rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        top: -5px;
+        left: 15px;
+        background-color: white;
+        box-shadow: 0 0 10px yellow , 0 0 20px yellow , 0 0 30px yellow , 0 0 40px yellow , 0 0 50px yellow , 0 0 60px yellow , 0 0 70px yellow , 0 0 80px yellow , 0 0 90px yellow , 0 0 100px yellow ;
+    }
+    @keyframes rotation {
+        to{
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div class="loader"></div>
+</body>
+</html>
