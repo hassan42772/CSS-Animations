@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Text Animation</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #000;
+       
+    }
+    h1{
+        /* width: 100%; */
+        color: #fff;
+        font-size: 5rem;
+        
+        text-transform: uppercase; 
+        position: relative;
+        
+    }
+    h1::before{
+        content: "Animation...";
+        position: absolute;
+        /* font-size: 5rem; */
+        top: 0;
+        left: 0;
+        color: limegreen;
+        border-right: 3px solid limegreen;
+        width: 0;
+        overflow-x: hidden;
+    }
+    @keyframes animate{
+        0%{
+            width: 0;
+        }
+        100%{
+            width: 100%;
+        }
+    }
+    h1::before{
+        animation: animate 3s linear infinite alternate;
+    }
+</style>
+<body>
+    <h1>Animation...</h1>
+</body>
+</html>
